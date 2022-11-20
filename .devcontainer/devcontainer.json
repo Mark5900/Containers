@@ -1,0 +1,24 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.169.0/containers/powershell
+{
+	"name": "PowerShell",
+	"dockerFile": "Dockerfile",
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"terminal.integrated.shell.linux": "/usr/bin/pwsh",
+		// Additional ports unnecessarily forwarded
+		"remote.autoForwardPorts": false
+	},
+	"containerEnv": {
+		"Data__RepositoryPath": "${containerWorkspaceFolder}"
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-vscode.powershell",
+		"wwm.better-align",
+		"felicio.vscode-fold",
+		"TylerLeonhardt.vscode-inline-values-powershell",
+		"oderwat.indent-rainbow",
+		"Gruntfuggly.todo-tree"
+	]
+}
